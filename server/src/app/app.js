@@ -1,22 +1,25 @@
-import express from 'express'
-import contactRoutes from "../routes/routes.js"
+import express from "express";
 import cors from "cors";
+import contactRoutes from "../routes/routes.js";
 
-const app = express()
+const app = express();
 
-app.use(express.json())
-
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://client-lilac-eta-67.vercel.app",
+  "https://client-42gdn09cd-jayeshchaudhari7s-projects.vercel.app",
+];
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://client-lilac-eta-67.vercel.app",
-      "https://client-42gdn09cd-jayeshchaudhari7s-projects.vercel.app",
-
-    ],
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.use(express.json());
+
 app.use("/api/contact", contactRoutes);
 
-export default app
+export default app;
