@@ -12,6 +12,8 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://client-lilac-eta-67.vercel.app",
+      "https://client-42gdn09cd-jayeshchaudhari7s-projects.vercel.app",
+
     ],
   })
 );
