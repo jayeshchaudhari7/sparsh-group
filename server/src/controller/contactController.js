@@ -1,4 +1,4 @@
-import Contact from "../models/Contact.js";
+import contact from "../models/contact.js";
 
 export async function createContact(req, res) {
   try {
