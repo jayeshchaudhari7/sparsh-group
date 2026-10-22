@@ -92,14 +92,7 @@ export default function ParallaxProjects() {
       </div>
 
       {/* Back-to-top button */}
-      <button
-        type="button"
-        onClick={scrollToTop}
-        aria-label="Back to top"
-        className="fixed bottom-10 right-7 z-40 flex h-14 w-14 items-center justify-center bg-[#e9b34e] text-3xl text-white transition-colors hover:bg-[#d49a30] md:right-12"
-      >
-        ↑
-      </button>
+     
     </section>
   );
 }
